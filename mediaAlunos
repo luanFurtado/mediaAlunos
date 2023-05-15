@@ -1,0 +1,32 @@
+let students = [
+  {
+    nome: "Carla",
+    nota1: 9,
+    nota2: 8,
+  },
+  {
+    nome: "Lucas",
+    nota1: 4,
+    nota2: 7,
+  },
+  {
+    nome: "Nikolas",
+    nota1: 2,
+    nota2: 4,
+  },
+];
+
+function mediaAlunos(aluno) {
+  return (aluno.nota1 + aluno.nota2) / 2;
+}
+
+for (let i = 0; i < students.length; i++) {
+  let aluno = students[i];
+  let mediaAluno = mediaAlunos(aluno);
+
+  if (mediaAluno >= 6) {
+    alert("A média da " + aluno.nome + " é " + mediaAluno + " e passou de ano!");
+  } else {
+    alert("A média da " + aluno.nome + " é " + mediaAluno + " e infelizmente reprovou de ano!");
+  }
+}
